@@ -39,12 +39,12 @@ class Customer {
             if ((each.getMovie().getPriceCode() == Movie.NEW_RELEASE) && each.getDaysRented() > 1) 
                 frequentRenterPoints ++;
             //show figures for this rental
-            result.append("\t" + each.getMovie().getTitle()+ "\t" + "\t" + each.getDaysRented() + "\t" + thisAmount + "\n");
+            result.append("\t").append(each.getMovie().getTitle()).append("\t").append("\t").append(each.getDaysRented()).append("\t").append(thisAmount).append("\n");
             totalAmount += thisAmount;
         }
         //add footer lines
-        result.append("Amount owed is " + totalAmount + "\n");
-        result.append("You earned " + frequentRenterPoints + " frequent renter points");
+        result.append("Amount owed is ").append(totalAmount).append("\n");
+        result.append("You earned ").append(frequentRenterPoints).append(" frequent renter points");
         return result.toString();
     }
 
