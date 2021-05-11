@@ -3,6 +3,8 @@ package movie_rental;
 import movie_rental.Customer;
 import movie_rental.Movie;
 
+import java.util.logging.Logger;
+
 /**
  * Note that Java console applications need to be run through the java runtime
  * by running "java -jar JarFile.jar" in the command line.
@@ -10,6 +12,7 @@ import movie_rental.Movie;
  */
 public class Program
 {
+
     /**
      * This is the main entry point for the application
      */

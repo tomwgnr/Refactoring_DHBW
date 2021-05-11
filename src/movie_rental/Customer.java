@@ -1,8 +1,12 @@
 package movie_rental;
 
 import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 class Customer {
+    private static final Logger LOGGER = Logger.getLogger( Customer.class.getName() );
+
     private String name;
     private final ArrayList<Rental> rentals = new ArrayList<>();
 
@@ -62,7 +66,7 @@ class Customer {
                     thisAmount += (rental.getDaysRented() - 3) * 1.5;
                 break;
             default:
-                System.out.println("There was an Error");
+                LOGGER.log(Level.WARNING,"There was an Error");
                 break;
         }
         return thisAmount;
