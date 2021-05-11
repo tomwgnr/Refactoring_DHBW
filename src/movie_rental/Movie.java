@@ -1,6 +1,6 @@
 package movie_rental;
 
-import java.util.logging.Logger;
+
 
 public class Movie {
 

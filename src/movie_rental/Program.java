@@ -1,9 +1,5 @@
 package movie_rental;
 
-import movie_rental.Customer;
-import movie_rental.Movie;
-
-import java.util.logging.Logger;
 
 /**
  * Note that Java console applications need to be run through the java runtime
