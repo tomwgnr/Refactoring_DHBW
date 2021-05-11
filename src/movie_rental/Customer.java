@@ -7,11 +7,11 @@ import java.util.logging.Logger;
 class Customer {
     private static final Logger LOGGER = Logger.getLogger( Customer.class.getName() );
 
-    private String name;
+    private final String name;
     private final ArrayList<Rental> rentals = new ArrayList<>();
 
-    public Customer (String newname){
-        name = newname;
+    public Customer (String newName){
+        name = newName;
     }
 
     public void addRental(Rental arg) {
@@ -30,10 +30,9 @@ class Customer {
         result += "\t" + "Title" + "\t" + "\t" + "Days" + "\t" + "Amount" + "\n";
 
         while (enumRentals.hasMoreElements()) {
-            double thisAmount = 0;
             Rental each = enumRentals.nextElement();
             //determine amounts for each line
-            thisAmount = amountFor(each);
+            double thisAmount = amountFor(each);
             // add frequent renter points
             frequentRenterPoints ++;
             // add bonus for a two day new release rental
@@ -60,7 +59,7 @@ class Customer {
             case Movie.NEW_RELEASE:
                 thisAmount += rental.getDaysRented() * 3;
                 break;
-            case Movie.CHILDRENS:
+            case Movie.CHILDREN:
                 thisAmount += 1.5;
                 if (rental.getDaysRented() > 3)
                     thisAmount += (rental.getDaysRented() - 3) * 1.5;

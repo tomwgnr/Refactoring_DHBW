@@ -4,7 +4,7 @@ package movie_rental;
 /**
  * Note that Java console applications need to be run through the java runtime
  * by running "java -jar JarFile.jar" in the command line.
- * Java console applications can not be previewed in the Compilr IDE, only applets can.
+ * Java console applications can not be previewed in the Compiler IDE, only applets can.
  */
 public class Program
 {
@@ -14,7 +14,7 @@ public class Program
      */
     
     
-    public static void main(String args[]) 
+    public static void main(String[] args)
     {
         String result;
         System.out.println("Welcome to the movie_rental.Movie Store");
